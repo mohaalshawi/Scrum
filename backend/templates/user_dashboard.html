@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>User Dashboard</h2>
+  <table>
+    <tr>
+      <th>Username</th>
+      <th>Registration Date</th>
+    </tr>
+    {% for user_profile in user_profiles %}
+    <tr>
+      <td>{{ user_profile.user.username }}</td>
+      <td>{{ user_profile.registration_date }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
